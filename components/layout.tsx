@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +9,13 @@ import s from './layout.module.css';
 const name = 'Oleksii Fedorkan';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={s.container}>
       <Head>
